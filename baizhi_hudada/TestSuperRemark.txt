@@ -1,0 +1,44 @@
+package day8;
+public class TestSuper{
+	public static void main(String[] args){
+         ClassB clsb=new ClassB();
+         clsb.print();
+	}
+}
+
+class ClassA{
+	int m=10;
+	public void method(){
+		System.out.println("method by ClassA ");
+	}
+}
+
+class ClassB extends ClassA{
+	int m=20;
+
+	public void method(){
+		super.method();  // 调用父类被覆盖的方法 
+		System.out.println("method by ClassA ");
+	}
+
+	public void print(){
+		System.out.println(this.m);  //20   
+		System.out.println(super.m);  //10   很少会用到，因为 属性通常是私有的，
+	}
+}
+
+
+class A {
+
+}
+
+class B extends A {
+    public B(){
+    	this(10);
+    	//super(); // 利用父类的无参构造方法创建父类对象 
+    }
+    public B(int a){
+    	this();
+    }
+}
+

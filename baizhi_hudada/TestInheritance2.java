@@ -1,8 +1,10 @@
 package day8;
 public class TestInheritance2{
 	public static void main(String[] args){
-         Animal2 ani= new Dog2();
-         ani.eat();
+         //Animal2
+          Dog2 ani= new Dog2();
+         //ani.eat();
+         ani.sleep();
 	}
 }
 
@@ -12,7 +14,8 @@ class Animal2{
 	 public void eat(){
 	 	System.out.println("eating by Animal2 ");
 	 }
-	 public void sleep(){
+	 private void sleep(){
+	 	System.out.println("sleeping by animal2 ! ");
 	 }
 }
 
@@ -23,8 +26,11 @@ class Dog2 extends Animal2{
 	public void eat(){
 	 	System.out.println("eating by Dog2 ");
 	}
-	//public void sleep(){
-	//}
+
+	public int sleep(){
+		System.out.println("sleeping by Dog2");
+		return 1;
+	}
 	public void shout(){
 
 	}
