@@ -65,13 +65,35 @@ class B extends A {
 
 }
 
-
+//父类标准写法    无参构造函数虽然系统自动提供，但是最好手动写
 class Super{
-	public Super(){}
-	public Super(int a){}
+	public Super(){}  
 }
+//子类标准写法  子类 无参构造函数 使用super调用父类无参构造函数 ；   
 class Sub extends Super{
-	/*public Sub(){
+	public Sub(){
 		super();
-	}*/
+	}
+}
+
+
+class MyClass{
+	int a=10;
+	int b;
+	String s="abc";
+	public MyClass(){
+		System.out.println("hehe");
+	}
+}
+
+class MyClassAfterCompile{
+	int a;
+	int b;
+	String s;
+	public MyClassAfterCompile(){
+		super();
+		a=10;
+		s="abc"
+		System.out.println("hehe");
+	}
 }
